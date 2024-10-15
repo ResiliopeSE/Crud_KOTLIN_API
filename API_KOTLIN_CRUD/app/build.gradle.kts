@@ -70,9 +70,14 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
 
     // Compose UI dependencies (si no las tienes aún)
+
+    //Esto último de la documentación
+    debugImplementation("androidx.compose.ui:ui-tooling:1.7.3")
+
     implementation("androidx.compose.ui:ui:1.5.1")
     implementation("androidx.compose.material:material:1.5.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.5.1")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.3")
+    //Esto se cambió por versión mas actual de la documentación. implementation("androidx.compose.ui:ui-tooling-preview:1.5.1")
     implementation("androidx.activity:activity-compose:1.7.2")
 
     // Coroutines para manejar tareas asincrónicas

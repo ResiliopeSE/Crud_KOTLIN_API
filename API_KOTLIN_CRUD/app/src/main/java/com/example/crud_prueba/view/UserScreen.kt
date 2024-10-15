@@ -5,8 +5,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.crud_prueba.model.UserRepository
+import com.example.crud_prueba.ui.LoginScreen
 import com.example.crud_prueba.viewmodel.UserViewModel
 import com.example.crud_prueba.viewmodel.UserViewModelFactory
 
@@ -27,4 +29,12 @@ fun UserScreen(userRepository: UserRepository) {
             Text(text = "Email: ${it.email}")
         } ?: Text(text = "Cargando...")
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun UserScreenPreview() {
+    // Proveer dependencias falsas o simuladas para el preview
+    val mockRepository = UserRepository() // Crea una instancia ficticia o simulada
+    UserScreen(userRepository = mockRepository)
 }
